@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#Username').on('input', function() {
     var input = $(this);
     var is_name=input.val();
-    if(is_name){
+    if(is_name && !(is_name.length <= 3)){
       input.removeClass("invalid").addClass("valid");
       $('#nameError').addClass('error').removeClass('error_show');
     }
@@ -59,22 +59,20 @@ $(document).ready(function() {
   $("form").submit(function(event){
     $("input").trigger("input");
     var form_data=$("#signup").serializeArray();
-    console.log(form_data);
-    var error_free=true;
-    for (var input in form_data){
-      var element=$(form_data[input]['name']);
-      console.log(element);
-      var valid=element.hasClass("valid");
-      var error_element=$("span", element.parent());
-      if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
-      else{error_element.removeClass("error_show").addClass("error");}
-    }
-    if (!error_free){
-      alert('Please fill all the fields')
+    // var error_free=true;
+    // for (var input in form_data){
+    //   var element=$(form_data[input]['name']);
+    //   var valid=element.hasClass("valid");
+    //   var error_element=$("span", element.parent());
+    //   if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
+    //   else{error_element.removeClass("error_show").addClass("error");}
+    // }
+    if ($(".form-control.invalid").length){
+      alert('Please fill all the fields.')
       event.preventDefault();
     }
     else{
-      alert('No errors: Form will be submitted');
+      alert('Form submitted');
     }
   });
 
