@@ -57,6 +57,7 @@ $(document).ready(function() {
 
     // After Form Submitted Validation
   $("form").submit(function(event){
+    // $("input").trigger("input");
     var form_data=$("#signup").serializeArray();
     console.log(form_data);
     var error_free=true;
