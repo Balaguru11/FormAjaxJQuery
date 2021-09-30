@@ -17,7 +17,7 @@ input.valid, textarea.valid{
 }
 
 h2 {
-    width:500px;
+    width:100%;
     color:green;
     font-size:25px;
     margin: 0 auto;
