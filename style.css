@@ -1,0 +1,25 @@
+input.invalid, textarea.invalid{
+	border: 2px solid red;
+}
+
+input.valid, textarea.valid{
+	border: 2px solid green;
+}
+
+.error{
+	display: none;
+	margin-left: 10px;
+}		
+
+.error_show{
+	color: red;
+	margin-left: 10px;
+}
+
+h2 {
+    width:500px;
+    color:green;
+    font-size:25px;
+    margin: 0 auto;
+    text-align: center;
+}

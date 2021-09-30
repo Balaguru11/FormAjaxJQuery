@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Css and bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Css and bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Custom JS file -->
     <script src="validation.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom JS file -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Validation using AJAX and jQuery</title>
-</head>
-<body>
-    <button class="btn btn-primary">Button</button>
-</body>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row py-5 px-5">
+            <div class="col-md-6 justify-content-center offset-md-3">
+                  <form id="signup" method="POST" action="">
+                        <h2>Signup Form</h2>
+                        <div class="form-group">
+                            <label for="Username">Username</label>
+                            <input type="text" placeholder="Username" class="form-control" id="Username" name="Username">
+                            <span id="nameError" class="error">Name is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email ID</label>
+                            <input type="email" placeholder="Email" class="form-control" name="email" id="email">
+                            <span id="mailError" class="error">Email is invalid.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input type="text" placeholder="Password" class="form-control" name="password" id="password">
+                            <span id="pwdFormatError" class="error">Password should contain 8 characters with a Uppercase, a lowercase, a Number and a Special character.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmpassword">Confirm Password</label>
+                            <input type="text" placeholder="Confirm Password" class="form-control" name="confirmpassword" id="confirmpassword">
+                            <span id="pwdMatchError" class="error">Password doesnot match.</span>
+                        </div>
+                        <div id="finalSubmit">				
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+  </body>
 </html>
